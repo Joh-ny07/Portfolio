@@ -1,0 +1,253 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+/*--------Main---------*/
+section{
+    height: 100vh;
+}
+
+
+/*Home*/
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(img/);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.home h1{
+    font-size: 120px;
+    text-align: center;
+    margin: 0px;
+}
+
+.home p{
+    text-align: center;
+    font-size: 30px;
+}
+
+
+h1:not(.home h1){
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+
+/*About Me*/
+.aboutMe{
+    margin-top: 50px;
+    height: 100vh;
+    padding: 0% 10%;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.about > div{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+.myInfo{
+    width: 30%;
+}
+
+.myInfo img{
+    width: 340px;
+    border-radius: 10px;
+}
+
+.myInfo h3{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.myInfo p{
+    margin: 10px;
+}
+
+
+.reseaux{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 20px;
+}
+
+.reseaux img{
+    width: 50px;
+}
+
+.myInfo button{
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.moreMe{
+    display: flex;
+    flex-direction: column;
+    gap:  3%;
+    padding: 20px;
+}
+
+.skills, .passion{
+    background-color: rgb(233, 233, 233);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.basket {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.basket > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.basket img {
+    display: inline;
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+/*Projets*/
+.Myprojets{
+    background-color: black;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.Myprojets h1{
+    color: white;
+}
+
+.projets{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 50px 5%;
+    flex-wrap: wrap;
+}
+
+.projets > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 22%;
+    height: 300px;
+    padding: 7px;
+    border-radius: 10px;
+    opacity: 80%;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    transition: 0.6s;
+}
+
+.projets > div:hover{
+    transform: scale(1.07);
+    box-shadow: 1px -4px 27px rgb(131, 127, 127);
+
+}
+
+
+.projet1{
+    background-image: url(img/home/sopra-steria.jpeg);
+}
+
+.projet2{
+    background-image: url(img/home/java_chatbot.jpg);
+}
+
+.projet3{
+    background-image: url(img/home/nutriscore.jpg); 
+}
+
+.projet4{
+    background-image: url(img/home/five.avif); 
+}
+
+
+.projets > div > p{
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 40%;
+    background-color: rgb(233, 233, 233);
+    font-size: 10px;
+}
+
+
+.projets div a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(233, 233, 233);
+    width: 25%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: 0.35s;
+}
+
+.projets div a:hover {
+    transform: scale(1.07);
+    box-shadow: 2px 2px 12px rgb(255, 255, 255);
+}
+
+.projets > div > div {
+    color: white;
+}
+
+.projets > div > div > p{
+    font-size: 12px;
+    margin: 0px;
+}
+
+.projets h3{
+    margin: 0px;
+    font-size: 16px;
+}
+
+.projets img{
+    width: 100%;
+}
+
+
+
+
+
