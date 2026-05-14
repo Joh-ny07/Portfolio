@@ -15,6 +15,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-content: space-around;
     color: white;
     top: 0px;
     height: 95vh;
@@ -51,14 +52,10 @@ section{
     border-radius: 10px;
 }
 
-
 .photo p{
     font-size:  25px;
     padding: 20px;
 }
-
-
-
 
 .texte{
     display: flex;
@@ -69,7 +66,7 @@ section{
     flex: 1;
     background-color: black;
     color: white;
-    font-size: 17px;
+    font-size: 23px;
     height: 250vh;
 }
 
@@ -87,8 +84,6 @@ section{
     background-size: cover;
     opacity: 0.9;
 }
-
-
 
 .texte > div:hover{
     transform: scale(1.03);
