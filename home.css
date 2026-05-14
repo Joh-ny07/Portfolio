@@ -41,8 +41,8 @@ h1:not(.home h1){
 /*About Me*/
 .aboutMe{
     margin-top: 50px;
-    height: 110vh;
-    padding: 0% 10%;
+    height: 130vh;
+    padding: 0% 40px;
 }
 
 .about{
@@ -62,7 +62,7 @@ h1:not(.home h1){
 }
 
 .myInfo img{
-    width: 310px;
+    width: 340px;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -230,7 +230,7 @@ h1:not(.home h1){
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    padding: 50px 5%;
+    padding: 50px;
     flex-wrap: wrap;
 }
 
@@ -251,13 +251,13 @@ h1:not(.home h1){
 }
 
 .projets > div:hover{
-    transform: scale(1.07);
+    transform: scale(1.035);
     box-shadow: 1px -4px 27px rgb(131, 127, 127);
 
 }
 
 .projet1{
-    background-image: url(img/home/sopra-steria.jpeg);
+    background-image: url(img/home/sopra-steria.jpg);
 }
 
 .projet2{
@@ -285,7 +285,7 @@ h1:not(.home h1){
     text-decoration: none;
     color: black;
     background-color: rgb(136, 131, 131);
-    width: 25%;
+    width: 16%;
     padding: 5px 10px;
     border-radius: 10px;
     font-size: 12px;
@@ -316,8 +316,3 @@ h1:not(.home h1){
 .projets img{
     width: 100%;
 }
-
-
-
-
-
