@@ -29,7 +29,7 @@ body{
 
 .home p{
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
 }
 
 h1:not(.home h1){
@@ -41,16 +41,20 @@ h1:not(.home h1){
     color: white;
 }
 
+.home > div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 
 /*About Me*/
 .about{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 50px 0px;
     height: 130vh;
     padding: 0% 40px;
-    
 }
 
 .about{
@@ -242,7 +246,7 @@ h1:not(.home h1){
 /*Projets*/
 .Myprojets{
     height: 150vh;
-    padding-top: 20px;
+    padding-top: 200px;
     display: flex;
     flex-direction: row;
 }
@@ -256,7 +260,7 @@ h1:not(.home h1){
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    padding: 50px;
+    padding: 0px 50px;
     flex-wrap: wrap;
 }
 
@@ -319,7 +323,7 @@ h1:not(.home h1){
 .projets div a {
     text-decoration: none;
     color: black;
-    background-color: rgb(136, 131, 131);
+    background-color: rgb(105, 116, 141);
     width: 20%;
     padding: 5px 10px;
     border-radius: 10px;
@@ -372,8 +376,8 @@ form{
     color: white;
     align-items: center;
     gap: 30px;
-    padding: 50px;
-    width: 40%;
+    padding: 30px;
+    width: 60%;
     border-radius: 10px;
 }
 
@@ -385,7 +389,7 @@ footer div{
  
 input, textarea{
     height: 30px;
-    width: 400px;
+    width: 700px;
 }
 
 textarea{
@@ -398,7 +402,6 @@ textarea{
     text-decoration: none;
     color: aliceblue;
     border-radius: 10px;
-    width: 300px;
     transition: 0.8s;
 }
 
