@@ -12,10 +12,10 @@ body{
     justify-content: center;
     height: 100vh;
     background-image: url(img/);
+    background-color: black;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
-    background-color: black;
     color: white;
 }
 
@@ -270,6 +270,14 @@ h1:not(.home h1){
 
 .projet4{
     background-image: url(img/home/five.avif); 
+}
+
+.projet5{
+    background-image: url(img/home/debian-13.jpg);
+}
+
+.projet6{
+    background-image: url(img/home/réseaux.jpg);
 }
 
 .projets > div > p{
