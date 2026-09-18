@@ -14,7 +14,6 @@ section{
     position: sticky;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     justify-content: space-around;
     color: white;
     top: 0px;
@@ -52,10 +51,7 @@ section{
     border-radius: 10px;
 }
 
-.photo p{
-    font-size: 25px;
-    padding: 20px;
-}
+
 
 .texte{
     display: flex;
@@ -68,11 +64,11 @@ section{
     font-size: 23px;
 }
 
-.texte > div{
+.contenuDiv, .titreDiv{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    padding: 10%;
     background-color: black;
     border-radius: 10px;
     transition: 0.2s;
@@ -82,8 +78,35 @@ section{
     opacity: 0.9;
 }
 
-.texte > div:hover{
+.contenuDiv:hover, .titreDiv div:hover{
     transform: scale(1.03);
+}
+
+.contenuDiv{
+    padding: 10%;
+}
+
+.titreDiv{
+    padding: 10px;
+    gap: 20px;
+}
+
+.titreDiv div{
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.titreDiv > div:first-child{
+    background-color:#162565;
+    flex: 1;
+}
+
+.titreDiv > div:last-child{
+    background-color: antiquewhite;
+    flex: 1;
 }
 
 .texte h2 {

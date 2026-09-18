@@ -88,7 +88,7 @@ h1:not(.home h1){
 }
 
 .myInfo img{
-    width: 80%;
+    width: 70%;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -230,6 +230,7 @@ h1:not(.home h1){
     font-size: 20px;
 }
 
+/*
 .basket {
     display: flex;
     flex-direction: row;
@@ -246,14 +247,15 @@ h1:not(.home h1){
     display: inline;
     width: 80%;
 }
-
+*/
 
 /*Projets*/
 .Myprojets{
-    height: 150vh;
+    height: 120vh;
     padding-top: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .Myprojets h1{
@@ -316,15 +318,6 @@ h1:not(.home h1){
     background-image: url(img/home/réseaux.jpg);
 }
 
-.projets > div > p{
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 10px;
-    width: 40%;
-    background-color: rgb(233, 233, 233);
-    font-size: 10px;
-}
-
 .projets div a {
     text-decoration: none;
     color: black;
@@ -341,20 +334,10 @@ h1:not(.home h1){
     box-shadow: 2px 2px 12px rgb(255, 255, 255);
 }
 
-.projets > div > div {
-    color: white;
-}
-
-.projets > div > div > p{
-    font-size: 15px;
-    margin: 0px;
-    margin-bottom: 10px;
-    color: rgb(216, 216, 216);
-}
-
 .projets h3{
     margin: 0px;
     font-size: 19px;
+    color: white;
 }
 
 .projets img{
