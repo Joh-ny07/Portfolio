@@ -52,7 +52,7 @@ section{
 }
 
 
-
+/*Droite*/
 .texte{
     display: flex;
     flex-direction: column;
@@ -69,7 +69,6 @@ section{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: black;
     border-radius: 10px;
     transition: 0.2s;
     background-position: center; 
@@ -80,6 +79,7 @@ section{
 
 .contenuDiv:hover, .titreDiv div:hover{
     transform: scale(1.03);
+    border: solid 2px white ;
 }
 
 .contenuDiv{
@@ -111,8 +111,6 @@ section{
 
 .texte h2 {
     font-size: 35px;
-    text-decoration-line: underline;
-    text-decoration-color: rgb(16, 84, 129);;
 }
 
 .competence li::marker{
