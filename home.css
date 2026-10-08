@@ -1,8 +1,20 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
-    background: linear-gradient(90deg, #06141b 0%, #0f1634 50%, #162565 100%);
-    background-attachment: fixed;
+    background-image: url('img/home/fond_gris.jpeg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;     
+    background-color: #6a6a6a; 
+}
+
+.title{
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45);
+    border-radius: 20px;
 }
 
 
@@ -10,29 +22,18 @@ body{
 /*Home*/
 .home {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(img/); 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
     color: white;
-    position: relative; 
 }
 
 /* Le nouveau conteneur qui met le texte et l'image côte à côte */
 .home-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 100px;
-    width: 100%;
     max-width: 1400px;
-    padding: 0 50px;
-    box-sizing: border-box;
 }
 
 .home-text {
@@ -150,24 +151,19 @@ body{
     justify-content: center;
     height: 130vh;
     padding: 0px 40px;
-}
-
-.about{
-    display: flex;
-    flex-direction: row;
     gap: 2%;
     height: fit-content;
 }
 
-.about > div{
-    background-color: #06141b;
-    border: solid 2px white;
-    color: white;
-    border-radius: 10px;
+.title1{
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .myInfo{
-    width: 30%;
+    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45);
+    color: #12203f;
+    border-radius: 30px;
 }
 
 .img{
@@ -203,44 +199,52 @@ body{
 }
 
 .myInfo h3{
-    font-size: 20px;
-    margin: 10px;
+    font-size: 30px;
+    margin: 1px;
 }
 
 .myInfo p, .moreMe p{
     margin: 10px;
-    color: rgb(196, 196, 196);
-    padding-bottom: 15px;
-    border-bottom: solid white;
+    padding-bottom: 20px;
+    border-bottom: solid #12203f;
 }
 
 .moreMe{
     display: flex;
     flex-direction: column;
     gap:  10px;
-    padding: 10px;
+    padding: 20px;
 }
 
-.skills, .passion{
-    background-color: #04183d;
-    color: white;
+.skills{
+    font-size: 20px;
+    color: #12203f;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #5c5c5c, #888787);
 }
 
 .language{
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    padding: 30px;
+    gap: 15px;
+    border-radius: 30px;
 }
+
 
 .language > div{
     display: flex;
     width: 33%;
-    background-color: #03112c;
+    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45);
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 30px;
+}
+
+.language > div:hover{
+    transform: scale(1.03);
 }
 
 .java:hover{
@@ -261,12 +265,12 @@ body{
 }
 
 .language > div > div > div h2{
-    font-size: 15px;
+    font-size: 20px;
     margin: 0px;
 }
 
 .language > div > div > div p{
-    font-size: 13px;
+    font-size: 17px;
     margin: 0px;
     color: rgb(196, 196, 196);
 }
@@ -280,29 +284,15 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    font-size: 13px;
+    font-size: 17px;
     padding-left: 20px;
     gap: 5px;
 }
 
+
 .language li:not(:last-child) {
     border-bottom: solid  rgb(100, 99, 99) 0.1px;
     padding-bottom: 5px;
-}
-
-.java li::marker{
-    color: rgb(226, 147, 2);
-    font-size: 20px;
-}
-
-.sql li::marker{
-    color: rgb(25, 186, 154);
-    font-size: 20px;
-}
-
-.htmlcss li::marker{
-    color: rgb(35, 91, 234);
-    font-size: 20px;
 }
 
 
@@ -328,23 +318,6 @@ body{
     flex-wrap: wrap;
 }
 
-.projets > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-basis: 30%;
-    height: 400px;
-    padding: 7px;
-    border-radius: 10px;
-    opacity: 80%;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
-    transition: 0.6s;
-    border: solid 2px white;
-}
-
 .projets > a {
     flex-basis: 30%;
     text-decoration: none;
@@ -359,13 +332,10 @@ body{
     height: 400px;
     padding: 7px;
     border-radius: 10px;
-    opacity: 80%;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
     transition: 0.6s;
-    border: solid 2px white;
-
 }
 
 .projets > a > div:hover {
@@ -445,8 +415,7 @@ form{
 .contact{
     display: flex;
     flex-direction: column;
-    background-color: #06141b;
-    border: solid 2px white;
+    background: linear-gradient(to right, #5c5c5c, #888787);
     color: white;
     align-items: center;
     gap: 30px;
@@ -472,7 +441,7 @@ textarea{
 
 .envoyer{
     padding: 10px 20px;
-    background-color: rgb(136, 131, 131);
+    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45);
     text-decoration: none;
     color: aliceblue;
     border-radius: 10px;
@@ -481,7 +450,6 @@ textarea{
 
 .envoyer:hover {
     transform: scale(1.07);
-    box-shadow: 2px 2px 12px rgb(255, 255, 255);
 }
 
 .reseaux{

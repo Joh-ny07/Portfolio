@@ -1,54 +1,58 @@
-/*Barre de navigation*/
-.navigation{
+/* Barre de navigation */
+.navigation {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    z-index: 1;
+    top: 0;
+    z-index: 100; 
     width: 100%;       
-    padding: 5px;
-    background-color: rgba(16, 28, 52, 0.827);
-    backdrop-filter: blur(10px);
-    color: white;
+    padding: 10px 20px;
+    box-sizing: border-box; 
+    background-color: rgba(28, 28, 30, 0.65); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-
-/*Moi*/
-nav > img {
-    padding-left: 50px;
+/* Moi (Logo) */
+.navigation > img {
+    margin-left: 20px;
     width: 50px;
-    transition: 0.6s;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    cursor: pointer;
 }
 
-nav > img:hover{
-    transform: scale(1.1);
+.navigation > img:hover {
+    transform: scale(1.1) rotate(-5deg); 
 }
 
-
-/*Menu*/
-.menu{
+/* Menu */
+.menu {
     display: flex;
     flex-direction: row;
-    height: 50px;
-    padding: 0px 30px;
-    border-radius: 30px;
-    gap: 40px;
+    align-items: center;
+    gap: 10px; 
+    margin-right: 20px;
 }
 
-.menu a{
-    align-self: center;
-    font-size: 20px;
-    padding: 8px 15px;
-    color: white;
+.menu a {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    color: #e5e5e5; 
     text-decoration: none;
-    border-radius: 10px;
-    transition: 0.65s;
+    border-radius: 8px;
+    border: 2px solid transparent; 
+    transition: all 0.3s ease;
 }
 
-.menu a:hover{
-    transform: scale(1.1); 
-    color: rgba(16, 28, 52, 0.827);
-    background-color: white;
-    border: solid 2px white;
+/* Effet au survol */
+.menu a:hover {
+    transform: translateY(-3px); 
+    color: #1c1c1e; 
+    background-color: rgba(229, 229, 229, 0.95); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
