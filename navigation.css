@@ -1,20 +1,22 @@
 /* Barre de navigation */
+.nav{
+    display: flex;
+    justify-content: center;
+}
 .navigation {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 0;
     z-index: 100; 
-    width: 100%;       
-    padding: 10px 20px;
-    box-sizing: border-box; 
+    width: 40%;       
+    padding: 7px 15px;
+    margin-top: 10px;
     background-color: rgba(28, 28, 30, 0.65); 
-    backdrop-filter: blur(12px); 
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(9px); 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
 }
 
 /* Moi (Logo) */

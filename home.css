@@ -7,6 +7,8 @@ body{
     background-repeat: no-repeat; 
     background-attachment: fixed;     
     background-color: #6a6a6a; 
+
+    --bleu:rgb(21, 55, 141);
 }
 
 .title{
@@ -25,114 +27,64 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: white;
-}
-
-/* Le nouveau conteneur qui met le texte et l'image côte à côte */
-.home-container {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    max-width: 1400px;
-}
-
-.home-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.home-text > div:first-child {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.home h1 {
-    font-size: 80px;
-    text-align: left;
-    margin: 0px;
-    opacity: 0;
-    animation: fadeUp 1s ease-out forwards;
-}
-
-.home-text > div:first-child h1:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.home p {
-    text-align: left;
-    font-size: 50px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    opacity: 0;
-    animation: fadeUp 1s ease-out 0.7s forwards;
-    text-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
-    color: #e0e7ff; 
-}
-
-.highlight {
-    color: rgb(35, 91, 234);
-}
-
-.home-image {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    border: 4px solid rgb(35, 91, 234);
-    box-shadow: 0px 0px 40px rgba(35, 91, 234, 0.5);
-    overflow: hidden;
-    opacity: 0;
-    animation: fadeUp 1s ease-out 0.5s forwards, float 4s ease-in-out infinite;
-}
-
-.home-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    box-sizing: border-box;
+    padding: 0 50px;
+    margin-top: 80px;
 }
 
-/* Boutons */
-.home-buttons {
+.home-container {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .home-title {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    text-align: center;
     opacity: 0;
-    animation: fadeUp 1s ease-out 1s forwards;
+    animation: fadeUp 1.2s ease-out forwards;
 }
 
-.btn-primary, .btn-secondary {
-    padding: 15px 35px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: 0.4s ease;
+/* Gros mot : large, serré, gris foncé */
+.home .big {
+    font-family: "Archivo", Arial Black, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 240px;
+    color: #333;
 }
 
-.btn-primary {
-    background-color: white;
-    color: #06141b;
+/* Prénom : script fin, bleu, chevauche le titre */
+.home .script {
+    position: absolute;
+    top: -8vw;
+    left: 3vw;
+    z-index: 2;
+    font-family: "Mrs Saint Delafield", cursive;
+    font-size: 15vw;
+    line-height: 1;
+    color: var(--bleu);
+    transform: rotate(-7deg);
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+/* Petit libellé en haut à droite */
+.home .label {
+    position: absolute;
+    top: -1vw;
+    right: 1vw;
+    font-family: "Archivo", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--bleu);
 }
 
-.btn-secondary {
-    border: 2px solid white;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: white;
-    color: #06141b;
-    transform: translateY(-5px);
-}
-
-/* --- KEYFRAMES (Animations) --- */
 @keyframes fadeUp {
     0% { opacity: 0; transform: translateY(40px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -140,19 +92,10 @@ body{
 
 
 /*About Me*/
+/* Palette : gris de fond, bleu du titre "Johny", bleu clair pour les accents sur verre */
 .aboutMe{
     padding-top: 20px;
     padding-bottom: 100px;
-}
-
-.about{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 130vh;
-    padding: 0px 40px;
-    gap: 2%;
-    height: fit-content;
 }
 
 .title1{
@@ -160,139 +103,267 @@ body{
     margin-left: 10%;
 }
 
-.myInfo{
-    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45);
-    color: #12203f;
-    border-radius: 30px;
+.about{
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 30px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 40px auto 0;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
+/* Effet "goutte d'eau" : verre dépoli teinté bleu-gris + reflet en haut */
+.myInfo, .moreMe > div{
+    background: linear-gradient(to right, #5c5c5c, #888787);
+    border-radius: 30px;
+    color: white;
+}
+
+/* --- Profil - Partie gauge --- */
+.myInfo{
+    position: sticky;
+    top: 100px;
+    padding: 30px 28px 32px;
+    text-align: center;
+}
+
+/* photo */
 .img{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 10px;
-    width: 518px;
+    position: relative;
+    width: 300px;
+    height: 300px;
 }
 
 .myInfo img{
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
+    height: 100%;
 }
 
 .texteMe{
     display: flex;
     flex-direction: column;
-    padding: 10px;
     gap: 20px;
-}
-
-.music{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.music > img{
-    width: 100px;
 }
 
 .myInfo h3{
-    font-size: 30px;
-    margin: 1px;
+    font-family: "Archivo", Arial Black, sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.15;
+    margin: 0 0 6px;
 }
 
-.myInfo p, .moreMe p{
-    margin: 10px;
-    padding-bottom: 20px;
-    border-bottom: solid #12203f;
+.texteMe > div > p{
+    margin: 0;
+    color: var(--bleu);
+    font-size: 16px;
 }
 
+.texteMe ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.texteMe li{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 20px;
+}
+
+.texteMe li span{
+    font-size: 17px;
+    color: var(--bleu);
+    margin-bottom: 2px;
+}
+
+/* bouton de contact*/
+.myInfo .envoyer{
+    align-self: center;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: var(--bleu);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.myInfo .envoyer:hover{
+    box-shadow: 2px 2px 12px rgb(255, 255, 255);
+}
+
+.myInfo .envoyer:focus-visible{
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+/* --- Colonne de droite --- */
 .moreMe{
     display: flex;
     flex-direction: column;
-    gap:  10px;
-    padding: 20px;
+    gap: 30px;
 }
 
-.skills{
-    font-size: 20px;
-    color: #12203f;
-    padding: 10px;
-    border-radius: 20px;
-    background: linear-gradient(to right, #5c5c5c, #888787);
+.moreMe > div{
+    padding: 32px 36px;
+}
+
+.moreMe h2{
+    font-family: "Archivo", Arial Black, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--bleu);
+    margin: 0 0 14px;
+}
+
+.moreMe p{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 70ch;
+}
+
+/* --- Compétences --- */
+.skills > p{
+    margin-bottom: 26px;
 }
 
 .language{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 30px;
-    gap: 15px;
-    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
-
 
 .language > div{
     display: flex;
-    width: 33%;
-    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45);
-    padding: 15px;
-    border-radius: 30px;
+    padding: 20px;
+    border-radius: 24px;
+    border-top: 3px solid transparent;
+    background: rgba(68, 70, 77, 0.993);
+    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s, border-color 0.4s;
 }
 
 .language > div:hover{
     transform: scale(1.03);
 }
 
+.cpl:hover{
+    border-top-color: rgb(70, 166, 245);
+}
+
 .java:hover{
-    border-top: solid rgb(226, 147, 2) 3px;
+    border-top-color: rgb(226, 147, 2);
 }
 
 .sql:hover{
-    border-top: solid rgb(25, 186, 154) 3px;
+    border-top-color: rgb(25, 186, 154);
 }
 
 .htmlcss:hover{
-    border-top: solid rgb(35, 91, 234) 3px;
+    border-top-color: rgb(35, 91, 234);
+}
+
+.php:hover{
+    border-top-color: rgb(111, 17, 173);
+}
+
+.language > div > div{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .language > div > div > div{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 12px;
 }
 
 .language > div > div > div h2{
-    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
     margin: 0px;
 }
 
 .language > div > div > div p{
-    font-size: 17px;
-    margin: 0px;
-    color: rgb(196, 196, 196);
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 2px 0 0;
+    color: rgb(205, 210, 222);
 }
 
 .language > div > div > div img{
-    width: 30px;
+    width: 40px;
     height: auto;
+    flex-shrink: 0;
 }
 
-.language ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    font-size: 17px;
-    padding-left: 20px;
-    gap: 5px;
+.language ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
 }
 
+.language li{
+    padding: 8px 0;
+}
 
-.language li:not(:last-child) {
-    border-bottom: solid  rgb(100, 99, 99) 0.1px;
-    padding-bottom: 5px;
+.language li:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* --- Parcours : une ligne d'eau avec des gouttes --- */
+.parcours h3{
+    margin: 0 0 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.parcours h3 + p{
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: var(--bleu);
+}
+
+.parcours li p:last-child{
+    font-size: 16px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1000px){
+    .about{
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .myInfo{
+        position: static;
+    }
+
+    .language{
+        grid-template-columns: 1fr;
+    }
+
+    .moreMe > div{
+        padding: 24px 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .language > div, .myInfo .envoyer{
+        transition: none;
+    }
 }
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,48 +8,49 @@
     <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="navigation.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
 </head>
-<body>
-    <head>
-        <nav class="navigation">
-            <img src="img/logo.png" alt="logo">
 
-            <div class="menu">
-                <a href="#aboutMe">A propos</a>
-                <a href="#MyProjects">Mes Projets</a>
-                <a href="#Contact">Me contacter</a>
-            </div>
-        </nav>
+<body>
+
+    <head>
+        <section class="nav">
+            <nav class="navigation">
+                <img src="img/logo.png" alt="logo">
+
+                <div class="menu">
+                    <a href="#aboutMe">A propos</a>
+                    <a href="#MyProjects">Mes Projets</a>
+                    <a href="#Contact">Me contacter</a>
+                </div>
+            </nav>
+        </section>
     </head>
 
     <main>
-        <section class="home">
-            <div class="home-container">
-                <div class="home-text">
-                    <div>
-                        <h1>Bonjour c'est <span class="highlight">Johny</span>,</h1>
-                        <h1>je vous présente</h1>
-                    </div>
-                    <p>Mon portfolio</p>
-                    <div class="home-buttons">
-                        <a href="#MyProjects" class="btn-primary">Voir mes projets</a>
-                        <a href="#Contact" class="btn-secondary">Me contacter</a>
-                    </div>
-                </div>
+<section class="home">
+    <div class="home-container">
+        <h1 class="home-title">
+            <span class="script">Johny</span>
+            <span class="label">Mon</span>
+            <span class="big">Portfolio</span>
+        </h1>
+    </div>
+</section>
 
-                <div class="home-image">
-                    <img src="img/white.avif" alt="Photo de Johny">
-                </div>
-            </div>
-        </section>
-
+        <!-- ================= A PROPOS ================= -->
         <section class="aboutMe" id="aboutMe">
             <h1 class="title title1">A propos</h1>
+
             <div class="about">
+
+                <!-- Carte profil -->
                 <div class="myInfo">
 
                     <div class="img">
-                        <img src="img/white.avif" alt="">
+                        <img src="img/white.avif" alt="Portrait de Johny Rabarijaoana">
                     </div>
 
                     <div class="texteMe">
@@ -56,15 +58,54 @@
                             <h3>Je suis RABARIJAOANA Johny</h3>
                             <p>Etudiant à l'IUT2 Grenoble</p>
                         </div>
+
+                        <ul>
+                            <li><span>Formation</span>BUT Informatique, 2e année</li>
+                            <li><span>École</span>IUT2 Grenoble</li>
+                        </ul>
+
+                        <a href="#Contact" class="envoyer">Me contacter</a>
                     </div>
                 </div>
 
+                <!-- Colonne de droite -->
                 <div class="moreMe">
+
+                    <div>
+                        <h2>Qui suis-je ?</h2>
+                        <p>
+                            Je suis étudiant en première année de BUT Informatique à l'IUT2 de Grenoble.
+                            J'y découvre le développement logiciel, les bases de données, le web
+                            et l'administration de systèmes. Ce portfolio rassemble les projets
+                            que j'ai réalisés pendant l'année.
+                        </p>
+                    </div>
+
                     <div class="skills">
                         <h2>Compétences</h2>
-                        <p>Au cours de ma première année de BUT informatique j'ai aquis de nombreux compétences à travers les cours</p>
+                        <p>Au cours de ma première année de BUT informatique, j'ai acquis de nombreuses compétences à
+                            travers les cours et les projets.</p>
 
                         <div class="language">
+                            <div class="cpl">
+                                <div>
+                                    <div>
+                                        <img src="img/language/java.png" alt="">
+                                        <div>
+                                            <h2>C/C++</h2>
+                                            <p>Programmation orientée objet</p>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>=====================</li>
+                                        <li>=====================</li>
+                                        <li>=====================</li>
+                                        <li>=====================</li>
+                                        <li>=====================</li>
+                                    </ul>
+                                </div>
+                            </div>
+
                             <div class="java">
                                 <div>
                                     <div>
@@ -75,8 +116,8 @@
                                         </div>
                                     </div>
                                     <ul>
-                                        <li>Classes & objets</li>
-                                        <li>Héritage & polymorphisme</li>
+                                        <li>Classes et objets</li>
+                                        <li>Héritage et polymorphisme</li>
                                         <li>Encapsulation</li>
                                         <li>Abstraction</li>
                                     </ul>
@@ -88,15 +129,15 @@
                                     <div>
                                         <img src="img/language/sql.png" alt="">
                                         <div>
-                                            <h2>SQL & Bases de données</h2>
-                                            <p>Modélisation & requêtes</p>
+                                            <h2>SQL et Bases de données</h2>
+                                            <p>Modélisation et requêtes</p>
                                         </div>
                                     </div>
                                     <ul>
                                         <li>Modèle entité-association</li>
                                         <li>Requêtes SELECT/JOIN</li>
-                                        <li>INSERT,UPDATE,DELETE</li>
-                                        <li>Triggers & fonctions</li>
+                                        <li>INSERT, UPDATE, DELETE</li>
+                                        <li>Triggers et fonctions</li>
                                     </ul>
                                 </div>
                             </div>
@@ -111,26 +152,52 @@
                                         </div>
                                     </div>
                                     <ul>
-                                        <li>Mise en page CSS (Flexbox/grid)</li>
-                                        <li>Sélecteurs & propriérés</li>
+                                        <li>Mise en page CSS (Flexbox/Grid)</li>
+                                        <li>Sélecteurs et propriétés</li>
                                         <li>Responsive design</li>
-                                        <li>Formulaires & tableaux</li>
+                                        <li>Formulaires et tableaux</li>
                                     </ul>
                                 </div>
                             </div>
-  
+
+                            <div class="php">
+                                <div>
+                                    <div>
+                                        <img src="img/language/css.png" alt="">
+                                        <div>
+                                            <h2>PHP</h2>
+                                            <p>Développement web front-end</p>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>=====================</li>
+                                        <li>=====================</li>
+                                        <li>=====================</li>
+                                        <li>=====================</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="parcours">
-                        
+                        <h2>Parcours</h2>
+                        <ol>
+                            <li>
+                                <h3>BUT Informatique, 1re année</h3>
+                                <p>IUT2 Grenoble</p>
+                                <p>Java, SQL, web, systèmes et réseaux : cours, TP et projets en équipe.</p>
+                            </li>
+                            <!-- Ajoute ici d'autres étapes (bac, stage...) en copiant un <li> -->
+                        </ol>
                     </div>
+
                 </div>
             </div>
         </section>
 
 
-        <section  class="Myprojets" id="MyProjects">
+        <section class="Myprojets" id="MyProjects">
             <section>
                 <div>
                     <h1 class="title">Mes Projets</h1>
@@ -145,7 +212,7 @@
                             </div>
                         </div>
                     </a>
-                    
+
                     <a href="projetChatbot.html">
                         <div class="projet2">
                             <div>
@@ -161,7 +228,7 @@
                             </div>
                         </div>
                     </a>
-                    
+
                     <a href="projetInstallationPosteTravail.html">
                         <div class="projet5">
                             <div>
@@ -212,4 +279,5 @@
         </form>
     </footer>
 </body>
+
 </html>
