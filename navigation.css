@@ -2,6 +2,7 @@
 .nav{
     display: flex;
     justify-content: center;
+    --bleu:rgb(21, 55, 141);
 }
 .navigation {
     display: flex;
@@ -13,7 +14,7 @@
     width: 40%;       
     padding: 7px 15px;
     margin-top: 10px;
-    background-color: rgba(28, 28, 30, 0.65); 
+    background-color: #333333b6; 
     backdrop-filter: blur(9px); 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     border-radius: 50px;
@@ -43,10 +44,10 @@
 .menu a {
     font-size: 18px;
     font-weight: 500;
-    padding: 8px 20px;
+    padding: 10px 20px;
     color: #e5e5e5; 
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 2px solid transparent; 
     transition: all 0.3s ease;
 }
@@ -55,6 +56,7 @@
 .menu a:hover {
     transform: translateY(-3px); 
     color: #1c1c1e; 
-    background-color: rgba(229, 229, 229, 0.95); 
+    background-color: white; 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
 }

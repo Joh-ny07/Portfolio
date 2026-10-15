@@ -105,10 +105,10 @@ body{
 
 .about{
     display: grid;
-    grid-template-columns: 340px 1fr;
+    grid-template-columns: 450px 1fr;
     gap: 30px;
     align-items: start;
-    max-width: 1400px;
+    max-width: 80%;
     margin: 40px auto 0;
     padding: 0 40px;
     box-sizing: border-box;
@@ -125,20 +125,16 @@ body{
 .myInfo{
     position: sticky;
     top: 100px;
-    padding: 30px 28px 32px;
+    padding: 15px;
     text-align: center;
 }
 
 /* photo */
-.img{
-    position: relative;
-    width: 300px;
-    height: 300px;
-}
-
 .myInfo img{
     width: 100%;
     height: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 .texteMe{
@@ -158,7 +154,7 @@ body{
 .texteMe > div > p{
     margin: 0;
     color: var(--bleu);
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .texteMe ul{
@@ -177,7 +173,7 @@ body{
 }
 
 .texteMe li span{
-    font-size: 17px;
+    font-size: 22px;
     color: var(--bleu);
     margin-bottom: 2px;
 }
@@ -188,18 +184,13 @@ body{
     padding: 12px 26px;
     border-radius: 999px;
     background: var(--bleu);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     font-weight: 700;
-    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 10px 35px rgba(0, 0, 0, 0.45);
+    transition: 0.6s;
 }
 
 .myInfo .envoyer:hover{
-    box-shadow: 2px 2px 12px rgb(255, 255, 255);
-}
-
-.myInfo .envoyer:focus-visible{
-    outline: 3px solid white;
-    outline-offset: 3px;
+    transform: scale(1.1); 
 }
 
 /* --- Colonne de droite --- */
@@ -225,7 +216,6 @@ body{
     margin: 0;
     font-size: 18px;
     line-height: 1.6;
-    max-width: 70ch;
 }
 
 /* --- Compétences --- */
@@ -384,7 +374,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    gap: 70px;
     padding: 0px 50px;
     flex-wrap: wrap;
 }
@@ -411,8 +401,6 @@ body{
 
 .projets > a > div:hover {
     transform: scale(1.035);
-    /*box-shadow: 1px -4px 27px rgb(131, 127, 127);*/
-
 }
 
 .projets > div:hover{
